@@ -87,26 +87,34 @@ function About() {
     margin: "30px 0",
   }}
 >
-  {/* Tombol Email */}
-  <button
-    onClick={() => (window.location.href = "mailto:agstiin0128@gmail.com")}
-    style={{
-      backgroundColor: "#ef4444",
-      color: "white",
-      padding: "10px 25px",
-      border: "none",
-      borderRadius: "25px",
-      fontWeight: "bold",
-      boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
-      textDecoration: "none",
-      transition: "all 0.3s ease",
-      cursor: "pointer",
-    }}
-    onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#b91c1c")}
-    onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ef4444")}
-  >
-    ✉️ Email Saya
-  </button>
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    window.open("mailto:agstiin0128@gmail.com");
+  }}
+  style={{
+    backgroundColor: "#ef4444",
+    color: "white",
+    padding: "10px 25px",
+    borderRadius: "25px",
+    fontWeight: "bold",
+    boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
+    textDecoration: "none",
+    transition: "all 0.3s ease",
+    cursor: "pointer",
+    display: "inline-block",
+    position: "relative",
+    zIndex: 10,
+  }}
+  onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#b91c1c")}
+  onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ef4444")}
+>
+  ✉️ Email Saya
+</a>
+
+
+
 
   {/* Tombol GitHub */}
   <a
